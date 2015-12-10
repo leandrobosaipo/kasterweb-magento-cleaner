@@ -24,5 +24,8 @@ Lightweight module to provide some cleaner feature for caches and logs
 ## Contributing
 Check [CONTRIBUTING.md](https://github.com/kasterweb/kasterweb-magento-cleaner/blob/master/CONTRIBUTING.md).
 
+## Questions
+Do you have any question? [Contact us](http://www.kasterweb.com.br).
+
 ## License
 Kasterweb Magento Cleaner is licensed under the [MIT license](https://github.com/kasterweb/kasterweb-magento-cleaner/blob/master/LICENSE).
