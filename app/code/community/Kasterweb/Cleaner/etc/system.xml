@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<kasterweb translate="label" module="cleaner">
+			<label>Kasterweb</label>
+			<sort_order>0</sort_order>
+		</kasterweb>
+	</tabs>
+	<sections>
+		<cleaner translate="label" module="cleaner">
+			<label>Cleaner</label>
+			<tab>kasterweb</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>0</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<memcached translate="label">
+					<label>Memcached</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<sockets_paths translate="label">
+							<label>Sockets paths</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Full path (separate by line)</comment>
+						</sockets_paths>
+					</fields>
+				</memcached>
+				<redis translate="label">
+					<label>Redis</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<socket_path translate="label">
+							<label>Socket path</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Full path</comment>
+						</socket_path>
+					</fields>
+				</redis>
+				<cdn translate="label">
+					<label>CDN</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>0</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<account_id translate="label">
+							<label>Account ID</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment></comment>
+						</account_id>
+						<access_token translate="label">
+							<label>Access Token</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment></comment>
+						</access_token>
+						<base_url translate="label">
+							<label>Base URL</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment></comment>
+						</base_url>
+					</fields>
+				</cdn>
+			</groups>
+		</cleaner>
+	</sections>
+</config>

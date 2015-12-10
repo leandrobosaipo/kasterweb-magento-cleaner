@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Kasterweb_Cleaner>
+            <version>0.1.0</version>
+        </Kasterweb_Cleaner>
+    </modules>
+    <global>
+        <helpers>
+            <cleaner>
+                <class>Kasterweb_Cleaner_Helper</class>
+            </cleaner>
+        </helpers>
+        <blocks>
+            <cleaner>
+                <class>Kasterweb_Cleaner_Block</class>
+            </cleaner>
+        </blocks>
+        <models>
+            <cleaner>
+                <class>Kasterweb_Cleaner_Model</class>
+            </cleaner>
+        </models>
+    </global>
+    <admin>
+        <routers>
+            <cleaner>
+                <use>admin</use>
+                <args>
+                    <module>Kasterweb_Cleaner</module>
+                    <frontName>cleaner</frontName>
+                </args>
+            </cleaner>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <cleaner module="cleaner">
+                <title>Cleaner</title>
+                <sort_order>100</sort_order>
+                <children>
+                    <cleaner module="cleaner">
+                        <title>Cache Management</title>
+                        <sort_order>0</sort_order>
+                        <action>cleaner/adminhtml_cache</action>
+                    </cleaner>
+                </children>
+            </cleaner>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <cleaner translate="title" module="cleaner">
+                            <title>Cleaner</title>
+                            <sort_order>1000</sort_order>
+                            <children>
+                                <cleaner translate="title">
+                                    <title>Cache Management</title>
+                                </cleaner>
+                            </children>
+                        </cleaner>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+            <modules>
+                <cleaner>
+                    <files>
+                        <default>Kasterweb_Cleaner.csv</default>
+                    </files>
+                </cleaner>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <cleaner>
+                    <file>cleaner.xml</file>
+                </cleaner>
+            </updates>
+        </layout>
+    </adminhtml>
+    <crontab>
+        <jobs>
+            <cleaner_redis>
+                <schedule>
+                    <cron_expr>*/5 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>cleaner/job::performRedis</model>
+                </run>
+            </cleaner_redis>
+            <cleaner_memcached>
+                <schedule>
+                    <cron_expr>*/5 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>cleaner/job::performMemcached</model>
+                </run>
+            </cleaner_memcached>
+        </jobs>
+    </crontab>
+</config>
