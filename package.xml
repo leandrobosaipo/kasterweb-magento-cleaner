@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Kasterweb_Cleaner</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <stability>stable</stability>
     <license uri="https://github.com/kasterweb/kasterweb-magento-cleaner/blob/master/LICENSE">MIT</license>
     <channel>community</channel>
@@ -16,7 +16,7 @@
  - EdgeCast CDN (HTTP Large) through API;</notes>
     <authors><author><name>Kasterweb</name><user>kasterweb</user><email>atendimento@kasterweb.com.br</email></author></authors>
     <date>2015-12-10</date>
-    <time>19:28:03</time>
+    <time>19:58:02</time>
     <contents><target name="magecommunity"><dir name="Kasterweb"><dir name="Cleaner"><dir name="Block"><dir name="Adminhtml"><file name="Cache.php" hash="436720af5aab691f84d66a30dcc0153f"/></dir></dir><dir name="Helper"><file name="Data.php" hash="d33b0c71789d72ae65dbda3f937bec7a"/></dir><dir name="Model"><file name="Cdn.php" hash="b1c3266c80d74ff335bad83065c4a686"/><file name="Job.php" hash="f982c8e9d55527fd5a071f8e8cef8bbf"/><file name="MagentoDatabase.php" hash="e6db322b7092184c84d09741a2830255"/><file name="MagentoDirectories.php" hash="50355d7e580e457a98c4c701d20679b6"/><file name="Memcached.php" hash="4044dec71a84333381b2bfd0b282851a"/><file name="Redis.php" hash="a69719caa05dcceee6d1c515288488f2"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="CacheController.php" hash="22ff2593b3f6f6968d8d0e6c7f098946"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="f5fbb178c389a61b3df13bbdb2f231f6"/><file name="config.xml" hash="658d9f7b3ad48b1b5dbea7fa1b40bf56"/><file name="system.xml" hash="bcdee9d6f04ca9a8ebc02d8367bbecee"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="cleaner.xml" hash="a409dffcabd055e76d499423b6f290bd"/></dir><dir name="template"><dir name="cleaner"><file name="cache.phtml" hash="6c1f624d7d7074e26fe00cdaf00003ff"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Kasterweb_Cleaner.xml" hash="a073c04099e12c913230e01bb4eee817"/></dir></target><target name="magelocale"><dir name="en_US"><file name="Kasterweb_Cleaner.csv" hash="f4258c3f68029c1df2d25ec9dae0c8fc"/></dir><dir name="pt_BR"><file name="Kasterweb_Cleaner.csv" hash="124463a77adfe80f14058e5186a3203f"/></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="cleaner"><dir name="css"><file name="cleaner.css" hash="9d582a980f9f539436a90b5c48f45400"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.3.0</min><max>10.0.0</max></php><package><name/><channel>connect.magentocommerce.com/core</channel><min/><max/></package><extension><name>Core</name><min/><max/></extension><extension><name>SPL</name><min/><max/></extension><extension><name>curl</name><min/><max/></extension></required></dependencies>

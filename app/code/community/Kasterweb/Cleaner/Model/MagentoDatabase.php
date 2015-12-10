@@ -91,17 +91,16 @@ class Kasterweb_Cleaner_Model_MagentoDatabase extends Mage_Core_Model_Abstract
 
     public function truncate()
     {
-        $truncatedResources = array();
-        $this->withoutForeignKeyChecks(array($this, 'truncateResources'));
-        return $truncatedResources;
+        return $this->withoutForeignKeyChecks(array($this, 'truncateResources'));
     }
 
     protected function truncateResources()
     {
-        foreach ($this->prepareResources($this->resources) as $resourceTable) {
+        $resourcesTables = $this->prepareResourcesTables($this->resources);
+        foreach ($resourcesTables as $resourceTable) {
             $this->dbWrite->truncateTable($resourceTable);
-            $truncatedResources[] = $resourceTable;
         }
+        return $resourcesTables;
     }
 
     protected function withoutForeignKeyChecks($closure)
@@ -124,7 +123,7 @@ class Kasterweb_Cleaner_Model_MagentoDatabase extends Mage_Core_Model_Abstract
      *
      * @return void
      */
-    protected function prepareResources($resources)
+    protected function prepareResourcesTables($resources)
     {
         $preparedResources = array();
         foreach ($resources as $resource) {
